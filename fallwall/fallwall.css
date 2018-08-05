@@ -1,0 +1,128 @@
+*{
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	overflow-x:hidden;
+}
+.fallbox.fall3D{
+	position:fixed;
+	    top: 0;
+    left: 0;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+        width: 70vw;
+    max-width: 1200px;
+    height: calc(100vh - 280px);
+}
+.fallbox .fall3D,
+.fallbox .fall-wrapper,
+.fallbox .fall-item{
+	    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.fallbox .fall3D .fall-item{
+	    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.fallbox,.fall-item,.fall-media{
+	padding:10px;
+}
+.fall-wrapper{
+	position:relative;
+}
+.fall-item {
+	position: absolute;
+	opacity: 0;
+}
+.fall-inner{
+	border-radius:3px;
+	box-shadow:0 0 2px 2px rgba(0,0,0,.22);
+}
+.fall-item img {
+	width: 100%;
+	display: block;
+}
+.fall-media{
+	position:relative;
+	cursor:pointer;
+}
+.fall-media:after{
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	-webkit-transform:scale(0);
+	transform:scale(0);
+	    -webkit-transition: all;
+    -o-transition: all;
+    transition: all;
+    -webkit-transition-duration: 250ms;
+    transition-duration: 250ms;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: rgba(0,0,0,0.1);
+    z-index: 0;
+    border-radius: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.fall-media:hover:after{
+	-webkit-transform:scale(1);
+	transform:scale(1);
+	opacity:1;
+}
+.fall-intro{
+	padding:10px;
+}
+.moveIn {
+	-webkit-animation: moveIn 1s ease;
+	-moz-animation: moveIn 1s ease;
+	-o-animation: moveIn 1s ease;
+	-ms-animation: moveIn 1s ease;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes moveIn {
+	from {
+		-webkit-transform: translate(0, 10%);
+		transform: translate(0, 10%);
+		opacity: 0;
+	}
+	to {
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes moveIn {
+	from {
+		-webkit-transform: translate(0, 10%);
+		opacity: 0;
+	}
+	to {
+		-webkit-transform: translate(0, 0);
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes moveIn {
+	from {
+		-moz-transform: translate(0, 10%);
+		opacity: 0;
+	}
+	to {
+		-moz-transform: translate(0, 0);
+		opacity: 1;
+	}
+}

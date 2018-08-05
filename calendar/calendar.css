@@ -1,0 +1,131 @@
+.sg-calendar,
+.sg-calendar *{
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*calendar*/
+.sg-calendar{
+	background:#009688;
+	font-family: "microsoft yahei";
+	box-shadow:0 1px 1px rgba(0,0,0,0.15);
+	display:inline-block;
+	border-radius:2px;
+	overflow:hidden;
+}
+.calendar {
+	color: #333;
+}
+
+.calendar .calendar-header {
+	background: rgba(0,0,0,.7);
+}
+
+.calendar .calendar-header,
+.calendar .calendar-body,
+.calendar .calendar-tool {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	display: -webkit-flex;
+	-webkit-box-align: center;
+	-webkit-box-lines: multiple;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.calendar .calendar-body .item,
+.calendar .calendar-header .item {
+	text-align: center;
+}
+
+.calendar .calendar-header .item {
+	height: 2rem !important;
+	line-height: 2rem !important;
+	color: #fff;
+}
+
+.calendar .calendar-body {
+	/*padding: .5rem 0;*/
+	background:#fff;
+}
+
+.calendar .calendar-body .item.current {
+	background-color: #E2E2E2;
+	color: #666;
+}
+
+.calendar .calendar-body .item.selected {
+	color: #fff;
+	background: #1ABC9C;
+}
+
+.calendar .calendar-body .pass,
+.calendar .calendar-body .future {
+	color: #999 !important;
+}
+
+.calendar .calendar-body .item {
+	cursor: pointer;
+	/*border-radius: 50%;*/
+	color: #333;
+	background: rgba(78, 178, 207, 0);
+	border-right:1px solid #f0f0f0;
+	border-bottom: 1px solid #f0f0f0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .25s;
+	transition: all .25s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select:none;
+}
+
+.calendar .calendar-tool {
+	position: relative;
+	padding:20px 15px 19px;
+	color:#fff;
+}
+
+.calendar .calendar-tool .calendar-week {
+	width: 3.5rem;
+}
+
+.calendar .calendar-tool .calendar-select {
+	display: -moz-box;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-webkit-box-lines: multiple;
+}
+.calendar .calendar-tool .calendar-select .calendar-select-prev,
+.calendar .calendar-tool .calendar-select .calendar-select-next {
+	color: #fff;
+	display:inline-block;
+	width: 2rem;
+	height:2rem;
+	text-align: center;
+	cursor:pointer;
+	line-height:2rem;
+	border-radius:50%;
+}
+
+.calendar .calendar-tool .calendar-select .calendar-select-prev:hover,
+.calendar .calendar-tool .calendar-select .calendar-select-next:hover{
+	color:#009688;
+	background:#fff;
+}
+.calendar .calendar-tool .calendar-today {
+	font-size: 1.5rem;
+}

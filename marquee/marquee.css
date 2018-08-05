@@ -1,0 +1,24 @@
+.marquee-box,
+.marquee-box *{
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.marquee-box {
+	position: relative;
+	width: 400px;
+	height: 40px;
+	background: #eee;
+	margin: 10px;
+	padding: 0 10px;
+	line-height: 40px;
+	overflow: hidden;
+}
+
+.marquee-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../common/ionicons/css/ionicons.min.css">
+		<link rel="stylesheet" href="shrink.css" />
+		<style>
+			.suspend {
+				margin: 10px;
+			}
+			
+			.box {
+				margin: 50px 300px;
+			}
+			
+			.suspend-vertical {
+				margin-left: 100px;
+			}
+			
+			.suspend-vertical-reverse {
+				margin-left: 180px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="suspend suspend-horizontal">
+				<span class="suspend-btn burge burge-line">
+				<span></span>
+				<span></span>
+				<span></span>
+				</span>
+				<span class="suspend-item">
+				<i class="ion-home"></i>
+			</span>
+				<span class="suspend-item">
+				<i class="ion-ios-paw"></i>
+			</span>
+				<span class="suspend-item">
+				<i class="ion-social-github"></i>
+			</span>
+			</div>
+
+			<div class="suspend suspend-vertical">
+				<span class="suspend-btn burge burge-line">
+				<span></span>
+				<span></span>
+				<span></span>
+				</span>
+				<span class="suspend-item">
+				<i class="ion-home"></i>
+			</span>
+				<span class="suspend-item">
+				<i class="ion-ios-paw"></i>
+			</span>
+				<span class="suspend-item">
+				<i class="ion-social-github"></i>
+			</span>
+			</div>
+
+			<div class="suspend suspend-horizontal-reverse">
+				<span class="suspend-btn burge burge-line">
+				<span></span>
+				<span></span>
+				<span></span>
+				</span>
+				<span class="suspend-item">
+				<i class="ion-home"></i>
+			</span>
+				<span class="suspend-item">
+				<i class="ion-ios-paw"></i>
+			</span>
+				<span class="suspend-item">
+				<i class="ion-social-github"></i>
+			</span>
+			</div>
+
+			<div class="suspend suspend-vertical-reverse">
+				<span class="suspend-btn burge burge-line">
+				<span></span>
+				<span></span>
+				<span></span>
+				</span>
+				<span class="suspend-item">
+				<i class="ion-home"></i>
+			</span>
+				<span class="suspend-item">
+				<i class="ion-ios-paw"></i>
+			</span>
+				<span class="suspend-item">
+				<i class="ion-social-github"></i>
+			</span>
+			</div>
+			
+			<div class="suspend suspend-circle">
+				<span class="suspend-btn burge burge-line">
+				<span></span>
+				<span></span>
+				<span></span>
+				</span>
+				<span class="suspend-item">
+				<i class="ion-home"></i>
+			</span>
+				<span class="suspend-item">
+				<i class="ion-ios-paw"></i>
+			</span>
+				<span class="suspend-item">
+				<i class="ion-social-github"></i>
+			</span>
+			</div>
+		</div>
+		<script src="shrink.js"></script>
+		<script>
+			var suspend = new LazySuspend('.suspend-horizontal', {
+				type: 'horizontal'
+			});
+
+			var suspend = new LazySuspend('.suspend-vertical', {
+				type: 'vertical'
+			});
+
+			var suspend = new LazySuspend('.suspend-horizontal-reverse', {
+				type: 'horizontal-reverse'
+			});
+
+			var suspend = new LazySuspend('.suspend-vertical-reverse', {
+				type: 'vertical-reverse'
+			});
+					
+			var suspend = new LazySuspend('.suspend-circle', {
+				type: 'circle',
+				distance: 50,
+				delay: 100,
+				direction: 'rb'
+			});
+		</script>
+	</body>
+
+</html>

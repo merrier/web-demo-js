@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="fallwall.css" />
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			.fallbox{
+				width:400px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="fallbox">
+			<div class="fall-wrapper">
+				<div class="fall-item">
+				<div class="fall-inner">
+					<div class="fall-media">
+						<img src="../../common/Images/a.jpg" alt="" />
+					</div>
+					<div class="fall-intro">
+						瀑布流
+					</div>
+				</div>
+			</div>
+			<div class="fall-item">
+				<div class="fall-inner">
+					<div class="fall-media">
+						<img src="../../common/Images/c.jpg" alt="" />
+					</div>
+					<div class="fall-intro">
+						瀑布流
+					</div>
+				</div>
+			</div>
+			<div class="fall-item">
+				<div class="fall-inner">
+					<div class="fall-media">
+						<img src="../../common/Images/b.jpg" alt="" />
+					</div>
+					<div class="fall-intro">
+						瀑布流
+					</div>
+				</div>
+			</div>
+			<div class="fall-item">
+				<div class="fall-inner">
+					<div class="fall-media">
+						<img src="../../common/Images/d.jpg" alt="" />
+					</div>
+					<div class="fall-intro">
+						瀑布流
+					</div>
+				</div>
+			</div>
+			<div class="fall-item">
+				<div class="fall-inner">
+					<div class="fall-media">
+						<img src="../../common/Images/a.jpg" alt="" />
+					</div>
+					<div class="fall-intro">
+						瀑布流
+					</div>
+				</div>
+			</div>
+			<div class="fall-item">
+				<div class="fall-inner">
+					<div class="fall-media">
+						<img src="../../common/Images/b.jpg" alt="" />
+					</div>
+					<div class="fall-intro">
+						瀑布流
+					</div>
+				</div>
+			</div>
+			<div class="fall-item">
+				<div class="fall-inner">
+					<div class="fall-media">
+						<img src="../../common/Images/c.jpg" alt="" />
+					</div>
+					<div class="fall-intro">
+						瀑布流
+					</div>
+				</div>
+			</div>
+			<div class="fall-item">
+				<div class="fall-inner">
+					<div class="fall-media">
+						<img src="../../common/Images/d.jpg" alt="" />
+					</div>
+					<div class="fall-intro">
+						瀑布流
+					</div>
+				</div>
+			</div>
+			<div class="fall-item">
+				<div class="fall-inner">
+					<div class="fall-media">
+						<img src="../../common/Images/d.jpg" alt="" />
+					</div>
+					<div class="fall-intro">
+						瀑布流
+					</div>
+				</div>
+			</div>
+			<div class="fall-item">
+				<div class="fall-inner">
+					<div class="fall-media">
+						<img src="../../common/Images/a.jpg" alt="" />
+					</div>
+					<div class="fall-intro">
+						瀑布流
+					</div>
+				</div>
+			</div>
+			<div class="fall-item">
+				<div class="fall-inner">
+					<div class="fall-media">
+						<img src="../../common/Images/b.jpg" alt="" />
+					</div>
+					<div class="fall-intro">
+						瀑布流
+					</div>
+				</div>
+			</div>
+			<div class="fall-item">
+				<div class="fall-inner">
+					<div class="fall-media">
+						<img src="../../common/Images/c.jpg" alt="" />
+					</div>
+					<div class="fall-intro">
+						瀑布流
+					</div>
+				</div>
+			</div>
+			<div class="fall-item">
+				<div class="fall-inner">
+					<div class="fall-media">
+						<img src="../../common/Images/d.jpg" alt="" />
+					</div>
+					<div class="fall-intro">
+						瀑布流
+					</div>
+				</div>
+			</div>
+			<div class="fall-item">
+				<div class="fall-inner">
+					<div class="fall-media">
+						<img src="../../common/Images/b.jpg" alt="" />
+					</div>
+					<div class="fall-intro">
+						瀑布流
+					</div>
+				</div>
+			</div>
+			<div class="fall-item">
+				<div class="fall-inner">
+					<div class="fall-media">
+						<img src="../../common/Images/a.jpg" alt="" />
+					</div>
+					<div class="fall-intro">
+						瀑布流
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<script src="fallwall.js"></script>
+		<script>
+			var fall = new WallFall('.fallbox', {
+				cols: 3,
+//				fall3D: true,
+				onLoad: function(fall) {
+//					var images = ['../../common/Images/e.jpg','../../common/Images/f.jpg','../../common/Images/g.jpg','../../common/Images/h.jpg'];
+					var data = [{
+						title: '瀑布流',
+						url : '../../common/Images/e.jpg'
+					},{
+						title: '瀑布流',
+						url : '../../common/Images/f.jpg'
+					},{
+						title: '瀑布流',
+						url : '../../common/Images/g.jpg'
+					},{
+						title: '瀑布流',
+						url : '../../common/Images/h.jpg'
+					}]
+					fall.addItem(data);
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>全屏滚动</title>
+		<link rel="stylesheet" type="text/css" href="fullpage.css">
+	</head>
+
+	<body>
+		<div class="fullscreen-container">
+			<div class="fullscreen-wrapper">
+				<div class="fullscreen-slide" style="background:yellowgreen">
+
+				</div>
+				<div class="fullscreen-slide" style="background:blue">
+
+				</div>
+				<div class="fullscreen-slide" style="background:purple">
+
+				</div>
+				<div class="fullscreen-slide" style="background:#ddd;">
+
+				</div>
+			</div>
+
+		</div>
+		<script src="fullpage.js"></script>
+		<script>
+			var nf = new NFullscreen(".fullscreen-container", {
+				pagination: true,
+				pageChangeEnd: function(fullscreen) {
+
+				},
+				paginationClickable: true
+			});
+		</script>
+	</body>
+
+</html>

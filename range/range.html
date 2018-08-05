@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="range.css" />
+		<style>
+			.range-slider {
+				margin: 40px 0 20px 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="range-slider range-field">
+			<input type="range" value="0" min="0" max="10"/>
+			<span class="range-slider-tooltip"></span>
+		</div>
+		<div class="range-slider custom-range">
+			<div class="range-bar"></div>
+			<div class="range-bar range-bar-active"></div>
+			<div class="range-knob-handle">
+				<div class="range-knob"></div>
+			</div>
+			<span class="range-slider-tooltip"></span>
+		</div>
+		<div class="range-slider success custom-range2">
+			<div class="range-bar"></div>
+			<div class="range-bar range-bar-active"></div>
+			<div class="range-knob-handle">
+				<div class="range-knob"></div>
+			</div>
+			<span class="range-slider-tooltip"></span>
+		</div>
+		<div class="range-slider warning custom-range">
+			<div class="range-bar"></div>
+			<div class="range-bar range-bar-active"></div>
+			<div class="range-knob-handle">
+				<div class="range-knob"></div>
+			</div>
+			<span class="range-slider-tooltip"></span>
+		</div>
+		<div class="range-slider error custom-range">
+			<div class="range-bar"></div>
+			<div class="range-bar range-bar-active"></div>
+			<div class="range-knob-handle">
+				<div class="range-knob"></div>
+			</div>
+			<span class="range-slider-tooltip"></span>
+		</div>
+		<script src="range.js"></script>
+		<script>
+			var range = new LYRange('.range-field', {
+				onChange: function(range) {
+					console.log(range.value);
+				}
+			});
+			var range2 = new LYRange('.custom-range', {
+				type: 2,
+				min: 10,
+				max:100,
+				defaultValue: 20,
+				onChange: function(range) {
+					console.log(range.value);
+				}
+			});
+			var range3 = new LYRange('.custom-range2', {
+				type: 2,
+				min: -10,
+				max:80,
+				defaultValue: 70,
+				onChange: function(range) {
+					console.log(range.value);
+				}
+			});
+		</script>
+	</body>
+
+</html>

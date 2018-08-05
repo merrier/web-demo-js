@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../../common/ionicons/css/ionicons.min.css" />
+		<link rel="stylesheet" href="calendar.css" />
+		<style>
+			body {
+				background: #eee;
+			}
+			
+			.sg-calendar {
+				box-shadow: 0 0.0625em 0.1875em 0 rgba(0, 0, 0, 0.1), 
+				0 0.5em 0 -0.25em #f2f2f2, 
+				0 0.5em 0.1875em -0.25em rgba(0, 0, 0, 0.1), 
+				0 1em 0 -0.5em #e5e5e5, 
+				0 1em 0.1875em -0.5em rgba(0, 0, 0, 0.1);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="sg-calendar"></div>
+		<script src="calendar.js"></script>
+		<script>
+			var calendar = new NCalendar('.sg-calendar', {
+				width: 500, // 日历宽
+				height: 600, // 日历高
+				sunFirst: true, // 是否设置星期天为第一天，默认为false
+				onChange: function(data) { //监听日期变化
+					console.log(data); // data为YYYY-MM-DD格式的日期
+				}
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击波浪效果</title>
+	<link rel="stylesheet" href="ripple.css" />
+	<style>
+		.btn {
+			width: 150px;
+			height:40px;
+			border: 1px solid #d9d9d9;
+			outline:none;
+			background: #008DC5;
+			color:#fff;
+		}
+		.btn-primary .ripple {
+			background: rgba(255, 255, 255, .4);
+		}
+	</style>
+</head>
+<body>
+	<button class="btn btn-default ripple-effect">点击波纹</button>
+	<button class="btn btn-primary ripple-effect">点击波纹</button>
+	<script src="ripple.js"></script>
+</body>
+</html>

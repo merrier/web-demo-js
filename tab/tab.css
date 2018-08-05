@@ -1,0 +1,107 @@
+.sg-tabs-block *{
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.sg-tabs-body {
+	margin: .3rem 0;
+}
+
+.sg-button-tabs {
+	position: relative;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-align-items: center;
+	align-items: center;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.sg-button-tab {
+	cursor: pointer;
+}
+
+.sg-button-tabs:after {
+	position: absolute;
+}
+
+.sg-button-tab {
+	position: relative;
+	/*overflow: hidden;*/
+	display: -moz-box;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-flex-shrink: 1;
+	flex-shrink: 1;
+	width: 100%;
+	padding: .3rem 0;
+	/*box-shadow: inset 0 -2px 0 0 #eee;*/
+}
+
+.sg-tabs-nav {
+	position: relative;
+}
+
+.sg-tabs-block .sg-tabs-indicator {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #1ABC9C;
+	height: .1rem;
+	-webkit-transition: left .25s;
+	transition: left .25s;
+	will-change: left;
+}
+
+.sg-tabs .sg-tab {
+	display: none;
+}
+
+.sg-tabs .sg-tab.active {
+	display: block;
+}
+
+.tab-scale .sg-button-tab:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #1ABC9C;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: transform .3s;
+	transition: transform .3s;
+}
+
+.tab-scale .sg-button-tab.active:after {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.sg-button-tab.active {
+	color: #1ABC9C;
+}
+
+.sg-tab-default .sg-button-tab.active:after{
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:-1px;
+	-webkit-box-sizing:border-box;
+	border: 1px solid #d9d9d9;
+	border-bottom-color: #fff;
+}

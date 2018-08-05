@@ -1,0 +1,34 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#topNav {
+	width: 100%;
+	overflow: hidden;
+	font: 16px/32px hiragino sans gb, microsoft yahei, simsun;
+	border-bottom: 1px solid #f8f8f8;
+}
+
+#topNav .swiper-slide {
+	padding: 0 5px;
+	letter-spacing: 2px;
+	width: 3rem;
+	text-align: center;
+}
+
+#topNav .swiper-slide span {
+
+	transition: all .3s ease;
+	display: block;
+}
+
+#topNav .active span {
+	transform: scale(1.1);
+	color: #FF2D2D;
+}
+
+img {
+	width: 100%;
+	line-height: 0;
+}

@@ -1,0 +1,49 @@
+html,
+body{
+	height:100%;
+}
+body{
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+.scrollSpy-tabs,
+.scrollSpy-tabs *,
+.scrollSpy-content,
+.scrollSpy-content *{
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.scrollSpy{
+	position:relative;
+	overflow:hidden;
+	overflow-y: auto;
+	height:100%;
+}
+.scrollSpy-tabs {
+	position:fixed;
+	right:50px;
+	top: 40px;
+	border-radius: 5px;
+	overflow:hidden;
+	box-shadow:0 0 3px 3px rgba(0,0,0,.4);
+}
+.scrollSpy-tabs ul{
+	list-style:none;
+}
+.scrollSpy-tabs ul li a{
+	display:inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	color:#333;
+}
+.scrollSpy-tabs ul li a:hover,
+.scrollSpy-tabs ul li a.active{
+	background:#eee;
+}
+.scrollSpy-content {
+	padding-right: 150px;
+}

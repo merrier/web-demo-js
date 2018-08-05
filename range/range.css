@@ -1,0 +1,169 @@
+.range-slider,
+.range-slider *{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-appearance: none!important;
+}
+.range-slider {
+	width:150px;
+    height: 42px;
+    position: relative;
+    cursor: pointer;
+}
+
+.range-slider .range-slider-tooltip {
+	font-size: 18px;
+	position: absolute;
+	z-index: 1;
+	top: -34px;
+	padding: 5px 10px;
+	text-align: center;
+	opacity: .8;
+	color: #333;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	background-color: #fff;
+	text-shadow: 0 1px 0 #f3f3f3;
+	display: none;
+}
+
+.range-slider input[type=range] {
+	position: relative;
+	width: 100%;
+	height: 2px;
+	margin: 17px 0;
+	padding: 0;
+	cursor: pointer;
+	border: 0;
+	border-radius: 3px;
+	outline: 0;
+	background-color: #999;
+}
+
+.range-slider input[type=range]::-webkit-slider-thumb {
+	/*滑块*/
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.13), 0 0 0 1px rgba(0, 0, 0, 0.02);
+	pointer-events: none;
+	-webkit-appearance: none!important;
+}
+
+.range-slider input[type=range]::-webkit-slider-runnable-track {
+	/*轨道*/
+	border-radius: 10px;
+}
+
+
+/*Firefox*/
+
+.range-slider input[type=range]::-moz-range-thumb {
+	/*滑块*/
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.13), 0 0 0 1px rgba(0, 0, 0, 0.02);
+	pointer-events: none;
+	-webkit-appearance: none!important;
+}
+
+.range-slider input[type=range]::-moz-range-track {
+	/*轨道*/
+	border-radius: 10px;
+}
+
+.range-slider input[type=range]::-moz-range-progress {
+	/*已填充的部分*/
+	border-radius: 10px;
+	background:#059CFA;
+}
+
+
+/*IE 9+*/
+
+.range-slider input[type=range]::-ms-track {
+	/*轨道*/
+	border-radius: 10px;
+	-webkit-appearance: none!important;
+}
+
+.range-slider input[type=range]::-ms-thumb {
+	/*滑块*/
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background: #fff;
+	border:1px solid #d9d9d9;
+	box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.13), 0 0 0 1px rgba(0, 0, 0, 0.02);
+	pointer-events: none;
+	-webkit-appearance: none!important;
+}
+
+.range-slider input[type=range]::-ms-fill-lower {
+	/*进度条已填充的部分*/
+	background:#059CFA;
+	border-radius: 10px;
+}
+
+.range-slider input[type=range]::-ms-fill-upper {
+	/*进度条未填充的部分*/
+	background:#333;
+	border-radius: 10px;
+}
+
+
+/*自定义*/
+
+.range-bar {
+    position: absolute;
+    top: 21px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background: #bdbdbd;
+    pointer-events: none;
+}
+.range-bar-active {
+    bottom: 0;
+    width: auto;
+    background: #387ef5;
+}
+.range-slider.error .range-bar-active{
+	background:#f44336;
+}
+.range-slider.warning .range-bar-active{
+	background:#ffc107;
+}
+.range-slider.success .range-bar-active{
+	background:#4caf50;
+}
+.range-knob-handle {
+    position: absolute;
+    top: 21px;
+    left: 0%;
+    margin-top: -21px;
+    margin-left: -21px;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+}
+.range-knob {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.13), 0 0 0 1px rgba(0, 0, 0, 0.02);
+    pointer-events: none;
+}

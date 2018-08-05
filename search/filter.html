@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>表单</title>
+		<style>
+			.filter * {
+				margin: 0;
+				padding: 0;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			
+			.filter {
+				position: relative;
+				display: inline-block;
+			}
+			
+			.filter-panel {
+				display: none;
+				position: absolute;
+				top: 99%;
+				left: 0;
+				width: 100%;
+				z-index:99;
+				background:#fff;
+				border: 1px solid #d9d9d9;
+				/*box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, .5);*/
+				-webkit-transition: all .3s;
+				transition: all .3s;
+				opacity: 0;
+				-webkit-transform: translate(0, 20px);
+				transform: translate(0, 20px);
+				display: none;
+			}
+			
+			.filter-open .filter-panel {
+				opacity: 1;
+				-webkit-transform: translate(0, 0);
+				transform: translate(0, 0);
+			}
+			.filter-panel ul li{
+				list-style: none;
+				padding:5px 10px;
+			}
+			.filter-panel ul li:hover{
+				background:#d9d9d9;
+			}
+			.filter-input{
+				width:200px;
+				height:35px;
+				padding:0 10px;
+				border: 1px solid #d9d9d9;
+				border-radius:3px;
+			}
+			.filter-input:focus{
+				outline-color: #4caf50;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="filter">
+			<input id="last_name" class='filter-input' type="text" placeholder="账号" autocomplete="off">
+		</div>
+		<script src="filter.js"></script>
+		<script>
+			var data = ["abc", "dfa", "名字"];
+			var sFilter = new SFilter('.filter', {
+				data: data
+			});
+		</script>
+	</body>
+
+</html>

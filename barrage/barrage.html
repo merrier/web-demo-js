@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../CSS/button/buttons.css" />
+		<link rel="stylesheet" href="barrage.css" />
+		<link rel="stylesheet" href="../colorSelector/colorSelector.css" />
+		<style>
+			.row{
+				padding:10px;
+			}
+			.row label{
+				display:inline-block;
+				width:80px;
+				text-align: right;
+			}
+			.row input{
+				padding:3px 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="row">
+			<label for="word">文字：</label>
+			<input type="text" placeholder="输入" id="word"/>
+		</div>
+		<div class="row">
+			<label for="bgcolor">背景颜色：</label>
+			<input type="text" class="color-picker" id="bgcolor" />
+		</div>
+		<div class="row">
+			<label for="color">文字颜色：</label>
+			<input type="text" class="color-picker" id="color" />
+		</div>
+		<div class="row">
+			<label for="speed">速度：</label>
+			<input type="text" id="speed" />
+		</div>
+		<div class="row">
+			<button class="btn btn-primary" id="send" style="margin-left:210px">发送</button>
+		</div>
+		<script src="../colorSelector/colorSelector.js"></script>
+		<script src="barrage.js"></script>
+		<script>
+			document.getElementById("send").addEventListener('click',function() {
+				var word = document.getElementById("word").value.trim();
+				word = word == '' ? '默认文字' : word;
+				var color = document.getElementById("color").value;
+				var bgcolor = document.getElementById("bgcolor").value;
+				var speed = document.getElementById("speed").value;
+				
+				var b = Barrage({
+					text: word,
+					color: color,
+					backgroundColor: bgcolor,
+					speed: speed,
+					url:'http://ghmagical.com',
+					img: '../../common/Images/f.jpg'
+				});
+			});
+		</script>
+	</body>
+</html>

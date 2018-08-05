@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>带表情输入的评论框</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" href="fontAwesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="richEditor.css">
+	<style>
+		*{
+			-webkit-box-sizing:border-box;
+			box-sizing:border-box;
+			outline:none;
+		}
+		body{
+			margin:0;
+			padding:0;
+			font-family:'microsoft yahei';
+		}
+		html,body{
+			height:100%;
+		}
+		
+		#editor{
+			margin:30px auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="editor" class="comment-box">
+		<p>这个评论框是可以输入表情的<img src="images/emotion/grin.png" class="emotion" width="20" height="20" alt="">！</p>
+		<p>你可以通过getHTML()获取编辑器中的所有内容，也可以通过getText()获取纯文本内容</p>
+	</div>
+	<script src="richEditor.js"></script>
+	<script>
+
+	var editor = new RichEditor("#editor", {
+		width:800,
+		height:200,
+		toolBg:"#eee",
+		buttons: {
+				emotion: {
+					title: "表情",
+					icon: "\uf118"
+				},
+				save: {
+					title: "发送",
+					icon: "发送",
+					click:function(){
+						console.log(editor.getText());
+					}
+				}
+			}
+	});
+	
+	</script>
+</body>
+</html>

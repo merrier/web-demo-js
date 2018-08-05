@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.circleloading {
+				position: relative;
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				overflow: hidden;
+				margin-top: -60px;
+			}
+			
+			.circleloading img {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				width: 80px;
+				height: 80px;
+				z-index: 10;
+			}
+			
+			.circleloading,
+			.circleloading img,
+			.left,
+			.right {
+				border-radius: 50%;
+			}
+			
+			.left,
+			.right {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				clip: rect(0, 50px, 100px, 0);
+				background: #fff;
+			}
+			
+			.left {
+				z-index: 7;
+				background: #afe4dd;
+			}
+			
+			.right {
+				z-index: 8;
+			}
+			.loading-box{
+				display:inline-block;
+				position:relative;
+				margin:100px;
+				text-align: center;
+			}
+			.loading-box .loading-num{
+				padding:10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="loading-box">
+			<div class="circleloading">
+				<div class="left"></div>
+				<div class="right"></div>
+				<img src="../../common/Images/t_balloon_logo.png" alt="" />
+			</div>
+			<div class="loading-num">0%</div>
+		</div>
+		<script>
+			var num = 0;
+			var loadingNum = document.querySelector('.loading-num');
+			var left = document.querySelector('.left');
+			var right = document.querySelector('.right');
+			var range = 10;
+			var timer = null;
+			timer = setInterval(function() {
+				range += 10;
+				num += Math.floor(100 / 36);
+				loadingNum.innerHTML = num + '%';
+				if(range <= 180) {
+					left.style.webkitTransform = 'rotate(' + range + 'deg)';
+					left.style.transform = 'rotate(' + range + 'deg)';
+				} else {
+					right.style.background = '#afe4dd';
+					if(range <= 360) {
+						right.style.webkitTransform = 'rotate(' + range + 'deg)';
+						right.style.transform = 'rotate(' + range + 'deg)';
+					} else {
+						clearInterval(timer);
+						loadingNum.innerHTML = '100%';
+					};
+				};
+			}, 20);
+		</script>
+	</body>
+
+</html>

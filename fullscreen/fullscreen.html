@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../CSS/button/buttons.css" />
+    <style>
+    :-webkit-full-screen,
+    :-moz-full-screen,
+    :-ms-full-screen,
+    :fullscreen {
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <button class="btn btn-default" id="open" onclick="toggleFullScreen()">开启全屏</button>
+    <br>
+    <video width="300" height="240" controls id="video">
+        <source src="http://www.runoob.com/try/demo_source/movie.mp4" type="video/mp4" /> 你的浏览器不支持video
+    </video>
+    <button class="btn btn-default" id="openVideo">开启视频全屏</button>
+    <script>
+    var addEvent = function(dom, type, handle, capture) {
+        if (dom.addEventListener) {
+            dom.addEventListener(type, handle, capture);
+        } else if (dom.attachEvent) {
+            dom.attachEvent("on" + type, handle);
+        }
+    };
+
+    function toggleFullScreen(elem) {
+        if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement) {
+            var docElm = elem || document.documentElement;
+            if (docElm.requestFullscreen) {
+                docElm.requestFullscreen();
+            } else if (docElm.mozRequestFullScreen) {
+                docElm.mozRequestFullScreen();
+            } else if (docElm.webkitRequestFullScreen) {
+                docElm.webkitRequestFullScreen();
+            } else if (docElm.msRequestFullscreen) {
+                docElm.msRequestFullscreen();
+            };
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitCancelFullScreen) {
+                document.webkitCancelFullScreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+        };
+    };
+
+    function getWebType() {
+        var type = ['webkit', 'moz', 'o', 'ms'];
+        var cur = '';
+        type.forEach(function(t) {
+            var mo = t + 'Transform';
+            if (mo in document.createElement('div').style) {
+                cur = t;
+            }
+        });
+        return cur;
+    };
+    var isOpen = false;
+    var prefix = getWebType();
+    addEvent(document, prefix + 'fullscreenchange', function() {
+        if (!isOpen) {
+            document.getElementById('open').innerHTML = '关闭全屏';
+            isOpen = true;
+        } else {
+            document.getElementById('open').innerHTML = '开启全屏';
+            isOpen = false;
+        }
+    }, false);
+    addEvent(document.getElementById('openVideo'), 'click', function() {
+        toggleFullScreen(document.getElementById('video'));
+    }, false);
+    </script>
+</body>
+
+</html>

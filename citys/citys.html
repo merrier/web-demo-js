@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="citys.css" />
+		<style>
+			.nselect {
+				margin-top:10px;
+			}
+			.selector-box select{
+				margin-right:5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="selector-box"></div>
+
+		<div class="nselect"></div>
+		<script src="cityData.js"></script>
+		<script src="citys.js"></script>
+		<script>
+			var nselector = new NSelector('.selector-box',{
+				data: city,
+				onChange: function(data){
+					console.log(data);
+				}
+			});
+			var nselector2 = new NSelector('.nselect',{
+				data: city,
+				custom: true,
+				onChange: function(data){
+					console.log(data);
+				}
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,79 @@
+.scroll-menu,
+.scroll-menu * {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.scroll-menu {
+	position: fixed;
+	top: 50%;
+	-webkit-transform: translate(0, -50%);
+	-moz-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+}
+.scroll-menu li a,
+.scroll-menu li span{
+	background: #222222;
+	color: #999;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.scroll-menu ul {
+	list-style:none;
+}
+.scroll-menu-tabs li{
+	position: relative;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.scroll-menu li a ,
+.scroll-menu li span {
+    display: block;
+    min-height: 3em;
+    min-width: 3em;
+    line-height: 3em;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+.scroll-menu li span{
+	position:absolute;
+	top:0;
+	 white-space: nowrap;
+}
+.scroll-menu li.active a,
+.scroll-menu li.active span{
+	    background: #2e81b0;
+    color: #fff;
+}
+
+.scroll-menu.scroll-menu-left{
+	left: 0;
+}
+.scroll-menu.scroll-menu-right{
+	right: 0;
+}
+.scroll-menu.scroll-menu-left li span{
+	right: 3em;
+}
+.scroll-menu.scroll-menu-right li span{
+	left: 3em;
+}
+.scroll-menu.scroll-menu-left .scroll-menu-tabs li{
+	left:0;
+}
+.scroll-menu.scroll-menu-right .scroll-menu-tabs li{
+	right:0;
+}
+
+.scroll-menu.scroll-menu-left .scroll-menu-tabs li span{
+	padding-left: 1em;
+}
+.scroll-menu.scroll-menu-right .scroll-menu-tabs li span{
+	padding-right: 1em;
+}

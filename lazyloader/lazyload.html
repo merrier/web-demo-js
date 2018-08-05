@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			.content{
+				width:200px;
+			}
+			img.loaded{
+				width:200px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="content">
+			通俗的讲就是：当访问一个页面的时候，先把img元素或是其他元素的背景图片路径 替换成一张大小为1*1px图片的路径（这样就只需请求一次）， 只有当图片出现在浏览器的可视区域内时，才设置图片正真的路径， 让图片显示出来。这就是图片懒加载。
+			<p>
+				关键点如下： 1、页面中的img元素，如果没有src属性， 浏览器就不会发出请求去下载图片（也就没有请求咯，也就提高性能咯）， 一旦通过javascript设置了图片路径，浏览器才会送请求。有点按需分配的意思， 你不想看，就不给你看，你想看了就给你看~ 2、如何获取正真的路径，这个简单， 现在正真的路径存在元素的“data-url”（这个名字起个自己认识好记的就行）属性里， 要用的时候就取出来，再设置；
+			</p>
+			<p>
+				<img data-src="../../common/Images/example.jpg" src="../../common/Images/loading5.gif" class="lazyload" alt="" />
+			</p>
+			
+			通俗的讲就是：当访问一个页面的时候，先把img元素或是其他元素的背景图片路径 替换成一张大小为1*1px图片的路径（这样就只需请求一次）， 只有当图片出现在浏览器的可视区域内时，才设置图片正真的路径， 让图片显示出来。这就是图片懒加载。
+			<p>
+				关键点如下： 1、页面中的img元素，如果没有src属性， 浏览器就不会发出请求去下载图片（也就没有请求咯，也就提高性能咯）， 一旦通过javascript设置了图片路径，浏览器才会送请求。有点按需分配的意思， 你不想看，就不给你看，你想看了就给你看~ 2、如何获取正真的路径，这个简单， 现在正真的路径存在元素的“data-url”（这个名字起个自己认识好记的就行）属性里， 要用的时候就取出来，再设置；
+			</p>
+			<p>
+				<img data-src="../../common/Images/girl.jpg" src="../../common/Images/loading5.gif" class="lazyload" alt="" />
+			</p>
+		</div>
+		<script src="lazyload.js"></script>
+	</body>
+
+</html>

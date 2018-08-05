@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../CSS/button/buttons.css" />
+		<style>
+			.btn{
+				position:relative;
+			}
+			.btn>input{
+				opacity:0;
+				width:100%;
+				height:100%;
+				position:absolute;
+				top:0;
+				left:0;
+			}
+			.box{
+				position:relative;
+				overflow:hidden;
+				text-align:center;
+				line-height:0;
+			}
+			.review{
+				float:left;
+				height:150px;
+				width:200px;
+				padding:5px 0;
+				border:1px solid #d9d9d9;
+			}
+			.review img{
+				max-width:100%;
+				max-height:100%;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box"></div>
+		<button class="btn btn-primary">
+			<input type="file" id="file" accept="image/*" />选择图片
+		</button>
+
+		<script>
+			document.getElementById('file').addEventListener('change',handleFiles);
+			function handleFiles(e) {
+				var files = e.target.files;
+				for(var i = 0; i < files.length; i++) {
+					var file = files[i];
+					var imageType = /^image\//;
+					if(!imageType.test(file.type)) continue;
+					var review = document.createElement('div');
+					review.className = 'review';
+					var img = document.createElement('img');
+					review.appendChild(img);
+					document.querySelector('.box').appendChild(review);
+					try {
+						var URL = window.URL || window.webkitURL;
+						var imgURL = URL.createObjectURL(file);
+						img.src = imgURL;
+//						URL.revokeObjectURL(imgURL);
+					} catch(e) {
+						var reader = new FileReader();
+						reader.onload = function(e) {
+							img.src = e.target.result;
+						};
+						reader.readAsDataURL(file);
+					}
+
+				}
+			}
+		</script>
+	</body>
+
+</html>
